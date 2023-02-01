@@ -1,4 +1,4 @@
-package tech.ula.gimp
+package tech.ula.inkscape
 
 import android.content.Intent
 import android.net.Uri
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     fun processIntent(intent: Intent) {
         val ulaIntent = Intent(this, MainActivity::class.java)
-        val app = App("gimp","Distribution", "gimp", false, true, false, 1)
+        val app = App("inkscape","Distribution", "inkscape", false, true, "false", false, 1)
         ulaIntent.putExtra("app", app)
         this.startActivity(ulaIntent)
         finish()

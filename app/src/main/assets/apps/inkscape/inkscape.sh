@@ -59,6 +59,6 @@ fi
 SCRIPT_PATH=$(realpath ${BASH_SOURCE})
 sudo rm -f $SCRIPT_PATH
 
-gimp
+inkscape
 
 exit

@@ -1,4 +1,4 @@
-package tech.ula.gimp
+package tech.ula.inkscape
 
 import org.junit.Test
 

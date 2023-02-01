@@ -1,4 +1,4 @@
-rootProject.name = "GIMP"
+rootProject.name = "Inkscape"
 include ':app', ':UserLAndLibrary'
 project(':UserLAndLibrary').projectDir = new File('UserLAndLibrary/app')
 
