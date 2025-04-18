@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33
-    buildToolsVersion "33.0.0"
+    namespace 'tech.ula.customlibrary'
+
+    compileSdkVersion 35
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
 
@@ -81,7 +82,7 @@ android {
         //these are used to help determine the resolution
         //TODO rework these into the math before next Relag merge
         buildConfigField 'boolean', 'FORCE_PORTRAIT_GEOMETRY', 'true'
-        buildConfigField 'int', "MAX_DIMENSION", "1000"
+        buildConfigField 'int', "MAX_DIMENSION", "10000"
         buildConfigField 'int', "MIN_DIMENSION", "360"
 
         //these can be used to turn off certain prompts we present to users
@@ -124,6 +125,7 @@ android {
         //Need unique provider authorities
         buildConfigField 'String', 'PROVIDER_AUTHORITY', "\"tech.ula.inkscape.provider.fileprovider\""
     }
+    buildFeatures.buildConfig true
 
     buildTypes {
         release {
@@ -132,11 +134,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 }
 
